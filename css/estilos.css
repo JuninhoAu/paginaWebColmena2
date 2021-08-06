@@ -109,7 +109,6 @@
   --serv-des:12px;
   --datos-width:50%;
   --nosotros-height:280px;
-  --footer-align:left;  
   --datos-height:100%;
   --intro-height:100%;
   --ultimo-height:320px;
@@ -135,6 +134,8 @@
 	--title-footer-web:80px;
   --margin-top-footer:10px;
   --ubicacion-padding:40px;
+  --footer-align:left;  
+
         
 
     }
