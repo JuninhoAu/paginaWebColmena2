@@ -116,6 +116,7 @@
   --footer-color:rgba(255,255,255,.7);/*color de fondo del mensaje del banner*/
   --footer-colot-text:#003A70;/*color del texto del pie de pagina*/
   --direccion:row;
+  --footer-align:left;  
 
 
     
@@ -134,9 +135,7 @@
 	--title-footer-web:80px;
   --margin-top-footer:10px;
   --ubicacion-padding:40px;
-  --footer-align:left;  
 
-        
 
     }
 }
@@ -179,7 +178,7 @@
   --cuadrado-border:none;
   --items-ubi:center;
   --margenes-ubi:40px;
-  --footer-text:12px;
+  --footer-text:13px;
 
 
 
@@ -807,6 +806,7 @@ justify-content: center;
   flex-wrap: wrap;
   align-items: var(--items-ubi);
 
+
 }
 
 .datos-contac1{
@@ -815,18 +815,16 @@ justify-content: center;
   width: 29%;
   height: 120px;
   text-align: center;
-  margin: 8px;
-  background-color: red;
+  margin: 4px;
 
 }
 
 .datos-contac2{
 
 
-  width: 32%;
+  width: 37%;
   height: 120px;
   text-align: center;
-  background-color: seagreen;
 
 }
 
