@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Colmena</title>
+    <!-- hoja de estilos  -->
+    <link rel="stylesheet" href="css/formulario.css">
+	<link href="css/formulario.css" type="text/css" rel="stylesheet" media="all">
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+</head>      
+    
+<body>    
+   
+    <form class="formulario">
+  <h1 class="formulario__titulo">Denuncias</h1>
+  <input type="text" name="alias" placeholder="Alias" id="alias">
+  <input type="text" name="correo" placeholder="Correo" id="correo">
+  <textarea type="text" name="msg" id="detext" placeholder="Denuncia*"  required></textarea>  
+  <input type="button" class="formulario__submit" name="enviar" value="Enviar denuncia" onclick="sendEmail()">
+  <a>*Obligatorio</a>    
+ 
+</form>
+ 
+    <!--<input type="button" value="enviar denuncia" onclick="sendEmail()">-->
+
+
+     <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript">
+    
+        
+        
+        function sendEmail() {
+            
+        var texto=document.getElementById("detext");
+        var malias=document.getElementById("alias");
+        var mcorreo=document.getElementById("correo");
+		var msjtext=texto.value;
+        var alias=malias.value;
+        var correo=mcorreo.value;
+            
+        if(msjtext.length>0){
+            
+            Email.send({
+    SecureToken :"d077a5de-6fc3-4f2c-9e3f-2f0d2a5d847b",
+    To : 'asistente@colmena.site,rrosado@colmena.pe',
+    From : "denunciascolmena@gmail.com",
+    Subject : "denuncias web",
+    Body : msjtext+", envia: "+alias+", correo para contacto: "+correo
+}).then( function (message){
+    alert(message);        
+    mcorreo.innerHTML = "";
+    malias.innerHTML = "";
+    texto.innerHTML = "";
+            
+        }
+    
+	
+    
+	
+);
+            
+            
+        }    else{
+            
+            alert("debe ingresar por lo menos el campo denuncia ")
+        }
+            
+            
+
+}
+        
+       
+    
+    
+    
+    
+    </script>
+</body>    

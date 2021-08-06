@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+<meta charset="utf-8">
+<link rel='icon' href='C4.png' type="image/png"/ >
+<title>Colmena</title>
+     
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="css/estilos.css">  
+<link rel="stylesheet" href="css/modal.css">        
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+<!-- los iconos se extraen de esta pagina web -->
+<script defer src="https://use.fontawesome.com/releases/v5.10.1/js/all.js" rel="stylesheet"></script>  
+<!-- Compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Minified JS library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- script para el efecto de subir y bajar al seleccionar una opcion en el menu -->
+<script src="js/smooth-scroll.min.js"></script>      
+  <script>
+      
+        function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);//That somewhat works, because Math.random() - 0.5 is a random number that may be positive or negative, so the sorting function reorders elements randomly.
+
+
+};
+       $.ajax({
+  url: "img/galeria/nuevasobras.txt",
+  success: function(data){
+      
+     var agaleria2=[];
+      
+       var lgaleria = data.split("\n");
+      
+      for(var i=0;i<lgaleria.length;i++){
+          
+          
+         agaleria2.push(lgaleria[i]);
+
+          
+    }
+      
+      
+      shuffle(agaleria2);
+      
+      console.log(agaleria2);
+
+      
+       var row = document.getElementById("galeriarow");
+      
+       
+    for(var i=0;i<agaleria2.length;i++){
+        
+      
+        var divimg=document.createElement('div');
+        divimg.className = 'img-fluid sigmapad col-lg-4 col-md-6 col-sm-6 contenedor-imagen';
+        divimg.onclick="";
+        divimg.alt="Image 2";
+        
+        var imgalery = document.createElement('img');
+        imgalery.src =  "img/galeria/"+agaleria2[i]; 
+        imgalery.style='width:100%';
+
+
+        
+        divimg.appendChild(imgalery);
+        setTitulo(agaleria2[i],divimg);
+        row.appendChild(divimg);  
+        
+   
+        
+    }  
+
+  }
+       
+       
+});
+      
+      
+function setTitulo(numero,divimg){
+    
+
+      var ola=numero.replace(".jpg", "");;
+       
+        $.ajax({
+      url: "des/"+ola+".txt",
+      dataType: "text",
+      success: function(data){
+          
+      var lines = data.split("\n");
+    
+          var divtxt=document.createElement('div');
+          divtxt.className='texto';
+          var titulo=document.createElement('h3');
+           titulo.innerHTML=lines[0];
+        titulo.className='titulo titulo-peque';
+
+        divtxt.appendChild(titulo);
+          
+          divimg.appendChild(divtxt);
+          titulo.onclick = function() {
+              
+            midata(ola);
+};
+
+          
+         }
+     }); 
+    
+
+    
+};
+      
+      
+      function midata(ola) {
+    
+          
+         // alert(ola);
+  mostrarData(ola);
+
+   
+};   
+
+ 
+
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 150,
+            time: 6000
+        });
+    });
+      
+      
+      	var scroll = new SmoothScroll('a[href*="#"]', {
+	// Selectors
+	ignore: '[href="#CarouselColmena"]', // ignorar las anclas del slider principal
+	header: null, // Selector for fixed headers (must be a valid CSS selector)
+
+	// Speed & Easing
+	speed: 1500, // velocidad del scroll en milisegundos
+	offset: 45, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+	easing: 'easeInOutCubic', // Easing pattern to use
+	customEasing: function (time) {
+
+		// Function. Custom easing pattern
+		// If this is set to anything other than null, will override the easing option above
+
+		// return <your formulate with time as a multiplier>
+
+		// Example: easeInOut Quad
+		return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+
+	},
+
+	// Callback API
+	before: function (anchor, toggle) {}, // Callback to run before scroll
+	after: function (anchor, toggle) {} // Callback to run after scroll
+});
+      
+      
+  </script>    
+  </head>
+   
+   
+    <body>
+ <header class="header">
+      <div class="contenedor-menu" style="z-index:999;position: absolute;">
+		<a href="index.html" class="logo"></a>
+        <span class="icon-menu" id="btn-menu" onclick=""><i class="fas fa-bars icon-menu"></i></span>
+        <nav class="nav" id="nav">
+          <ul class="menu">
+            <li class="menu__item"><a href="index.html"  class="menu__link">Inicio</a></li>
+            <li class="menu__item"><a href="#" class="menu__link select">Proyectos</a></li>
+            <li class="menu__item"><a href="index.html#servicios" class="menu__link">Servicios</a></li>
+            <li class="menu__item"><a href="index.html#nosotros" class="menu__link">Nosotros</a></li> 
+            <li class="menu__item"><a href="index.html#ubicacion" class="menu__link">Contactenos</a></li> 
+          </ul>
+          
+        </nav>
+      </div>
+    </header>
+  
+ 
+       
+ <section id="gallery" >
+      <script>
+     
+         var random = Math.floor(Math.random() * $('.mostrar').length);
+         $('.mostrar').hide().eq(random).show();
+         
+     </script>
+     
+
+     <div class="container-fluid">
+
+        <div class="row" id="galeriarow">
+   
+            
+            
+         
+
+        </div>
+         
+     
+       
+    </div>
+     
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+   
+    <div class="modal-descrip" style="background:#FFFFFF">
+       
+            <div  class="modal-imagen">
+
+       
+             <img  id="img01" style="height:100%;width:100%">
+                   
+
+            </div>
+
+       
+         <div  class="modal-texto">
+
+           <span class="closes">&times;</span>
+             <p class ="modal-titulo" id="mtitulo" >...</p>
+             <p class="modal-ubicacion" id="mubi">...</p>
+
+           <div class="about-para-txt" >
+           <p class="modal-parrafo" style="text-align:justify" id="jtexto">...</p>
+           </div>
+          
+     </div>
+
+    </div >
+     
+</div>
+   
+
+</section>
+ 
+
+  
+   <!-- footer -->
+  <footer class="footer" STYLE="BACKGROUND:#003a70">
+   
+    <div class="pie" >
+     
+<div class="so-moviles" style="margin:0px">
+  
+      <a   href="mailto:info@colmena.site" ><i class="far fa-envelope-open" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>                   
+      <a   href="https://www.facebook.com/Colmena" target="_blank" style=""> <i class="fab fa-facebook" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+      <a   href="https://twitter.com/colmenagroup" style="" target="_blank"> <i class="fab fa-twitter" style="color: #FFFFFF;font-size: 2em;margin:5px" ></i></a>
+      <a   href="https://www.instagram.com/colmenacompany/" style="" target="_blank"> <i class="fab fa-instagram" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+      <a   href="https://www.linkedin.com/company/colmena/" style="" target="_blank"> <i class="fab fa-linkedin" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+                               
+      </div>
+       
+    </div>
+               <!-- PIE DE PAGINA  -->
+           
+     <p class="copy" style="text-align: center ;margin-bottom:0px;font-size:12px;color:white">&copy; Colmena Gestión y Control de obras todos los derechos </p>
+   
+     
+     
+    </footer>
+  <!--//footer -->  
+ 
+       
+     
+   
+ <script src="js/modalpro.js"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="js/jquery.counterup.js"></script>          
+<script src="js/jscript.js"></script>  
+</body>    
+
+
+   
+
+</html>

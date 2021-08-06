@@ -1,0 +1,955 @@
+@import url('https://fonts.googleapis.com/css?family=Literata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-face {
+  font-family: "muc zeit";
+  src: url("../css/muc.ttf");
+}
+
+:root{
+    
+    --primary-color:#003a70;/*color de la navbar*/
+    --secundary-color:white;/*color de la letras*/
+    --header-height:60px;
+    --top-banner:50%;
+    --galeria-fondo:rgba(0,58,112,.4);/*color deL hover de las fotos de la galeria*/
+    --msj-banner-size:15px;/*tamaño de las letras del mensaje del banner*/
+    --logo-design:url("../img/LGCOLMENA.png");/*logo de la pag web*/
+	--logo-width:200px;/*ancho del logo*/
+    --logo-heiht:60px;/*alto del logo*/
+    --titulo-obra:21px;
+    --alt-servicios:900px;/*altura de la seccion servicios*/
+    --titulos-size:30px;/*tamaño del texto de los titulos*/
+    --serv-height:190px;/*alto de cada de una de las secciones del servicio*/
+    --serv-width:95%;/*ancho de cada una de las secciones del servicio*/
+    --serv-padding:20px;
+    --ancho-imagen:35px;/*ancho del icono*/
+    --alto-imagen:35px;/*alto del icono*/
+    --datos-width:100%;/*ancho de la seccion nosotros*/
+    --intro-height:70%;/**alto de la seccion nosotros */
+    --datos-height:30%;/*alto de la seccion inversion gestionada*/
+    --marco-left:0%;/*el marco esta a izquieda*/
+	--marco-top:0%;
+    --us-pf-size:11px;
+    --marco-width:100%;/*ancho del marco*/
+    --marco-height:100%;/*alto del marco*/
+	--marco-text-align:center;/*texto del marco centrado*/
+	--marco-tf:none;
+    --texto-pading:0px;/*espacio entre el texto*/
+	--menu-padding:23px;/*espacio entre cada uno de los elementos del menu*/
+	--menu-width:50%;/*tamaño del menu*/
+    --marco-color:rgba(255,255,255,.5);/*color de fondo del mensaje del banner*/
+    --footer-color:none;/*color de fondo del mensaje del banner*/
+    --footer-colot-text:white;/*color del texto del pie de pagina*/
+    --cuadrado-border:solid;
+    --ultimo-height:295px;
+    /*CAMBIOS 25/09/2019*/
+    --nos-padding:30px;
+    --serv-des:10px;
+    --nosotros-height:290px;
+    --monto-size:25px;
+    --monto-des:12px;
+    --client-title-font:20px;
+    --client-title-align:left;
+    --size-logos:100px;
+    --footer-text:9px;
+    --footer-align:center;
+    --title-footer-web:20px;
+    --margin-top-footer:10px;
+	--datos-contac:75%;
+	--right-menu:50%;
+	--mostrar-menu:50%;
+  --tamano-dire:14px;
+  --items-ubi:center;
+  --margenes-ubi:5px;
+  --direccion:column;
+  --ubicacion-padding:0px;
+
+  
+
+}
+
+@media (min-width: 576px) {
+:root{
+
+  --msj-banner-size:26px;/*tamaño de las letras del mensaje del banner*/
+	--menu-width:25%;/*tamaño del menu*/
+  --alt-servicios:600px;
+  --serv-width:50%;
+  --serv-height:240px;
+	--serv-padding:45px;
+	--nosotros-height:260px;
+	--menu-padding:10px;
+  --intro-height:65%;/**alto de la seccion nosotros */
+  --datos-height:35%;/*alto de la seccion inversion gestionada*/
+  --datos-contac:50%;
+	--right-menu:0%;
+	--mostrar-menu:25%;
+
+
+    
+    }
+
+
+}
+
+@media (min-width: 768px) {
+
+  
+    
+    :root{
+
+  --serv-height:240px;
+  --serv-padding:60px;
+  --nos-padding:60px;
+  --serv-des:12px;
+  --datos-width:50%;
+  --nosotros-height:280px;
+  --footer-align:left;  
+  --datos-height:100%;
+  --intro-height:100%;
+  --ultimo-height:320px;
+  --margin-top-footer:1px;
+  --footer-color:rgba(255,255,255,.7);/*color de fondo del mensaje del banner*/
+  --footer-colot-text:#003A70;/*color del texto del pie de pagina*/
+  --direccion:row;
+
+
+    
+    }
+
+}
+
+@media (min-width: 992px) { 
+    
+   :root{
+          
+
+
+	--menu-width:100%;
+  --logo-design:url("../img/LGCOLMENA.png");
+	--title-footer-web:80px;
+  --margin-top-footer:10px;
+  --ubicacion-padding:40px;
+        
+
+    }
+}
+
+@media(min-width:1024px) {  
+
+:root{
+  --alt-servicios:600px;
+  --titulos-size:38px;
+  --serv-height:420px;
+  --serv-width:20%;
+  --datos-width:50%;
+  --marco-left:25%;
+  --msj-banner-size:32px;
+	--marco-top:50%;
+	--menu-padding:23px;
+	--marco-text-align:left;/*texto del marco centrado*/
+  --marco-width:50%;
+	--marco-tf:translateX(-50%) translateY(-50%);
+  --marco-height:auto;
+  --ancho-imagen:70px;
+  --alto-imagen:70px;
+  --nosotros-height:340px;
+  --nos-padding:60px;
+  --serv-des:12px;
+  --ultimo-height:350px;
+  --serv-padding:40px; 
+  --monto-size:50px;
+  --monto-des:25px;
+  --client-title-align:left;
+  --client-title-font:35px;
+  --size-logos:200px;
+  --footer-color:rgba(255,255,255,.48);/*color de fondo del mensaje del banner*/
+  --footer-colot-text:#003A70;/*color del texto del pie de pagina*/
+  --texto-pading:40px;
+  --margin-top-footer:40px;
+  --header-height:70px;
+  --logo-width:233px;
+  --logo-height:70px;
+  --cuadrado-border:none;
+  --items-ubi:center;
+  --margenes-ubi:40px;
+  --footer-text:12px;
+
+
+
+    }
+
+}
+
+@media(min-width:1280px) { 
+
+ :root{ 
+   --us-pf-size:16px;/*tamaño del texto de nosotros*/
+   --titulo-obra:32px;/*tamaño de la letra de las obras en la galeria*/
+   --top-banner:40%;
+   --serv-des:14px;/*tamaño del texto de descripcion*/
+   --footer-text:14px;
+
+
+
+
+ }
+    
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+ *display: block;
+  max-width: 100%;
+   
+}
+
+body {
+    
+  margin: 0;
+}
+
+
+/* Style the navbar */ 
+/* --- Clase que agregaremos cuando el usuario haga scroll --- */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #EAEAEA;
+     text-decoration: none;
+
+}
+
+.menu-fixed {
+	position:fixed;
+	z-index:100;
+	top:0;
+	width:100%;
+	box-shadow:0px 4px 3px rgba(0,0,0,.5);
+}
+
+
+/*-------------------Estilos del header-------------------*/
+.header {
+  height:var(--header-height);
+  background:var(--primary-color);
+}
+.header .contenedor-menu {
+  display: flex;
+ /* justify-content: space-between;*/
+}
+.contenedor-menu{
+    
+    padding-left: 35px;
+    z-index:999;
+    position: absolute;
+}
+.logo{
+	
+  align-self: center;	
+  margin: auto;
+ content:var(--logo-design);
+	  width:var(--logo-width); /*200px*/
+  height:var(--logo-height);/*60px;*/
+
+
+}
+.icon-menu {
+  margin: 1px;
+}
+.icon-menu {
+  align-self: center;	
+  display: block;
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  background: var(--primary-color);
+  color: var(--secundary-color);
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin: left;
+  cursor: pointer;
+}
+/*------------------Estilos del menu------------------*/
+.nav {
+	 /*--- left: -100%;------*/
+	/*-left: var(--left-menu);-*/
+  
+  position: absolute;
+  top: 60px;
+  right:100%;
+  width:var(--mostrar-menu);
+}
+
+.mostrar {
+
+	right:var(--right-menu);
+	
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+	 /*-width:var(--menu-width);-*/
+	width:100%;
+}
+.menu__link {
+  display: block;
+  padding:var(--menu-padding);
+  background: var(--primary-color);
+  color: var(--secundary-color);    
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.copy{
+      font-family: 'Raleway', sans-serif;
+      text-align: center ;
+      margin-bottom:0px;
+      font-size:12px;
+      color:white;
+
+    
+}
+
+.menu__link:hover, .select {
+  background: var(--secundary-color);
+  color:var(--primary-color);
+}
+
+
+
+/*--------------Estilos de banner--------------*/
+
+.banner {
+  position: relative;
+  z-index: -1000;
+  margin-bottom: 0px;
+}
+
+.banner .contenedor-menu {
+  position: absolute;
+  top: var(--top-banner);
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+
+/****************************TODO BANNER**************************************************************/
+
+/*--CONTENEDOR MENSAJE BANNER--*/
+
+.marco{
+    
+    position: absolute;
+    left:var(--marco-left);
+    width:var(--marco-width);
+    height:var(--marco-height);
+    background:var(--marco-color);
+    transform: var(--marco-tf);
+    text-align:var(--marco-text-align);
+   /*-- top: 50%;--*/
+	top:var(--marco-top);
+    padding: 40px;
+	z-index: 1000;
+   
+    
+}
+.cuadrado{
+	
+    width:100%;
+    height: 100%;
+    display: block;
+   
+}
+.mensaje-banner{
+    font-size: var(--msj-banner-size);
+ color: var(--primary-color);
+    top: 50%;
+    position: relative;
+    transform:translateY(-50%);
+/*--    font-family: 'Poppins', sans-serif;--*/
+    font-family: 'Montserrat', sans-serif;   
+	font-weight:500;
+
+   
+    }
+/*-- MENSAJE BANNER--*/
+
+
+.contenedor-menu {
+  margin: auto;
+  width: 100%;
+}
+
+/****************************FIN BANNER**************************************************************/
+
+
+/****************************TODO GALERIA**************************************************************/
+
+
+/*----CONTENEDORES de las imagenes-------*/
+
+.contenedor-imagen {
+   
+    overflow: hidden;
+    position: relative;
+   
+}
+
+.contenedor-imagen::before{
+   content:"" ;
+    position: absolute;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;  
+}
+
+
+/*----AL PONER EL MOUSE SOBRE UNA DE LAS IMAGENES-------*/
+
+.contenedor-imagen:hover:before{
+    
+    background: var(--galeria-fondo);
+    z-index: 2;
+    transition: all .8s;
+}
+
+/*---Margenes de la galeria---*/
+.sigmapad {
+	padding: 0 0 0 0 !important;
+	margin: 0 !important;
+}
+
+/*---CONTENEDOR DE LOS TEXTO DENTRO DE CADA DIV DE LA GALARIA---*/
+
+.texto{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    color:var(--secundary-color);
+    z-index: 3;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+/*---ESTILOS DE TITULO Y "VER INFO"---*/
+
+.titulo,.parrafo{
+    
+    margin: 1px;
+    padding: 1px;
+/*--- font-family: 'Poppins', sans-serif;--*/
+    font-family: 'Open Sans', sans-serif;
+  
+
+}
+/*---TITULO DE CADA UNA DE LAS OBRAS EN LA GALERIA---*/
+.titulo-peque{
+    
+   /*---  font-size: 21px;---*/
+    font-size: var(--titulo-obra);
+     color: white;
+     position: relative;
+     top: 100%;
+     transition: all .5s;
+     margin: 30px;
+    
+}
+
+.titulo-peque:hover{
+    
+    cursor: pointer;
+  
+}
+
+/*---SUBTITULO ""VER INFO"" DE CADA UNA DE LAS OBRAS EN LA GALERIA---*/
+
+.parrafo{
+    
+     position: relative;
+    top: 100%;
+    transition: all .5s;
+     display: block;
+     color: white;
+     text-align: center;
+     text-decoration: none;
+    
+}
+
+/*---EL TITULO DE CONTENEDOR AL PASAR EL MOUSE ---*/
+
+.contenedor-imagen:hover .titulo{
+    top: 0;
+    animation-delay: .5s;
+    transition: all .5s;
+    
+}
+
+/*---EL SUBTITULO DE CONTENEDOR AL PASAR EL MOUSE ---*/
+
+.contenedor-imagen:hover .parrafo{
+      top: 0;
+      animation-delay: .5s;
+      transition: all .5s;
+}
+
+
+/*INICIO DE LOS SERVICIOS*/
+
+/*-----------------Estilos de SERVICIOS-----------------*/
+ .cont-servicios{
+        display: flex;
+        flex-wrap: wrap;
+     
+    }
+
+.my-serv{
+    
+ width: 100%;    
+ height: var(--alt-servicios);    
+ background-position: center;    
+   
+}
+
+.title-serv{
+    
+    font-size:var(--titulos-size);
+    color:var(--secundary-color);
+    font-family: 'Open Sans', sans-serif;
+    text-align:center;
+}
+
+.cont-serv{
+    
+width: 100%;    
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+    
+}
+
+.serv1{
+    width:var(--serv-width);
+    height:var(--serv-height);
+    padding-left:var(--serv-padding);
+    padding-right:var(--serv-padding);
+    text-align: center;
+    margin-bottom: 15px;
+	font-weight: 500; 
+
+
+}
+
+.serimage{
+    
+   width:var(--ancho-imagen);
+   height:var(--alto-imagen);
+}
+
+
+.st{
+    
+    margin: 12px;
+    text-align: center;
+	color:white;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.pf{
+    font-size: var(--serv-des);
+    text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
+    font-family: 'Montserrat', sans-serif;   
+	color:white;
+	margin-top: 10px;
+}
+
+/*-------------------NOSOTROS----------------------------------*/
+
+
+.nosotros{
+ 
+     width: 100%;  
+    height: var(--nosotros-height);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:2px;
+
+}
+
+.intro{
+    width:var(--datos-width);
+    height:var(--intro-height);
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;   
+    font-size: var(--us-pf-size);
+    padding-left: var(--nos-padding);
+    padding-right:var(--nos-padding);    
+
+
+}
+
+.datos{
+    width:var(--datos-width);
+    height:var(--datos-height);
+    font-family: 'Montserrat', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+   
+}
+
+.intro h4{
+    
+    text-align: center;
+    font-size: var(--titulos-size);
+    font-weight: 700;
+    color: #003A70;
+    
+
+
+}
+
+.intro p{/*--descripcion de NOSOTROS --*/
+    
+    margin:0px;
+   
+	text-align:justify;
+    
+}
+
+
+.estadisticas{/*-------SECCION que contiene la cifra(inversion) y su descripcion--------*/
+    
+    width:350PX;
+    text-align: center;
+   
+   
+
+    
+
+}
+
+.monto{/*-------cifra en dolares de la inversión--------*/
+    
+    display: inline-block;
+    color: #157e06;
+    font-size:var(--monto-size);
+    font-weight:bold;
+    font-family: "muc zeit", sans-serif;
+    
+}
+
+.estadisticas p{/*-------texto que describre la cifra--------*/
+    
+    color:#10284a;
+     font-weight:bold;
+    font-size:var(--monto-des);
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.logos{   /*-------SECCION que contiene un titulo y logos de los clientes--------*/ 
+    display: block;
+    padding-top:  20px;
+     padding-bottom:  10px;
+   /*--  padding-right:var(--nos-padding);---*/ 
+   /*--  padding-left:var(--nos-padding);---*/ 
+   
+}
+
+.client-title{/*-------estilos del titulo de la seccion clientes--------*/
+  
+    text-align:var(--client-title-align);
+    font-size:var(--client-title-font);
+    width: 100%;
+    color:#003a70;
+    display:inline-block;
+    padding-bottom:40px;      
+    font-family: 'Montserrat', sans-serif;   
+    font-weight: bold;
+    padding-left:40px;
+    opacity:0.8
+   
+   
+    
+}
+
+.client-list{
+
+    margin-bottom: 20px;
+    opacity:0.5;
+   
+    
+}
+
+.col{
+    
+    margin:0px;
+    padding-left:6px;
+}
+
+
+/*------------------FIN NOSOTROS-------------------------------*/
+
+/*INICIO DEL  FOODER*/
+
+/*-----------------Estilos de footer-----------------*/
+
+.footer {
+    
+    color:var(--secundary-color);
+    padding-top:8px;
+    padding-bottom: 10PX;
+   
+   
+
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: var(--direccion);
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  padding-top: 10px;
+  padding-left:var(--ubicacion-padding);
+  flex: 56%;
+  background:var(--footer-color);
+}
+
+.flex-item-right {
+  flex: 44%;
+}
+
+
+
+.mapita{
+
+      width:var(--datos-width);
+    
+}
+
+.abrirmapa{
+
+  color:var(--footer-colot-text);
+}
+
+.title-footer{
+    
+    font-size:var(--titulos-size);
+    font-family: 'Montserrat', sans-serif;   
+    font-weight: bold;
+    text-align:left;
+    font-weight: 700;
+   margin-top:var(--margin-top-footer);
+   margin-bottom: 20px; 
+   text-align:var(--footer-align); 
+   color:var(--footer-colot-text);
+
+
+
+   
+}
+
+.direcciones{
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: var(--items-ubi);
+
+}
+
+.datos-contac1{
+
+
+  width: 29%;
+  height: 120px;
+  text-align: center;
+  margin: 8px;
+  background-color: red;
+
+}
+
+.datos-contac2{
+
+
+  width: 32%;
+  height: 120px;
+  text-align: center;
+  background-color: seagreen;
+
+}
+
+
+
+.tnubicacion{
+   
+ 
+  font-family: 'Monserrat', sans-serif;
+  font-size: var(--tamano-dire);
+  margin-bottom:5px;
+  font-weight: bold;
+  text-align:var(--footer-align); 
+  color:var(--footer-colot-text);
+  
+
+
+ 
+}
+
+.nubicacion{
+   
+  text-align:var(--footer-align); 
+	 font-size:var(--footer-text);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom:0;
+
+ 
+}
+
+.so-moviles{
+    
+    text-align: center;
+    width:100%;
+     padding-top: 20px;
+    padding-bottom: 10px;
+    margin:0px;
+}
+
+
+
+
+/*------------------Estilos responsive------------------*/
+
+
+
+@media(min-width:1024px) {  
+  .contenedor-menu {
+    width: 1000px;
+  }
+  .nav {
+    top: 70px;  
+    position: static;
+    width: auto;
+  }
+    
+    
+  .logo{
+  margin-left: 100px;      
+
+  }    
+    
+  .menu {
+    display: flex;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu__link {
+    background: none;
+    font-size: 16px;
+    color: #FFF;  
+    font-family: 'Raleway', sans-serif;
+  
+  }
+  .select {
+    color: var(--secundary-color);  
+    background: var(--primary-color);  
+  }
+    
+    .menu__link:hover, .select {
+   background: rgba(10,40,74,.8);
+     color:var(--secundary-color);   
+}
+	
+.mensaje-banner{
+    text-align: left;
+    padding-top: 10px;
+	transform:none;
+   
+    }
+        
+    
+.title-serv{
+  font-family: 'Montserrat', sans-serif;   
+  padding-bottom:12px;
+    margin-top:50px;
+}
+    
+.serv1{    
+    margin: 10px;
+    padding: 20px;
+}
+     
+.intro p{
+    margin:30px;
+}
+
+.nosotros{
+ 
+    padding-top:60px;
+    padding-bottom:10px
+
+}
+
+   
+}
+
+@media(min-width:1280px) {
+   
+
+.contenedor-menu {
+   width: 1200px;
+}
+  
+   
+}

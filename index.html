@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+<meta charset="utf-8">
+<link rel='icon' href='C4.png' type="image/png" >
+<title>Colmena</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="css/estilos.css">  
+<link rel="stylesheet" href="css/modal.css">        
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+<!-- los iconos se extraen de esta pagina web -->
+<script defer src="https://use.fontawesome.com/releases/v5.10.1/js/all.js" rel="stylesheet"></script>  
+<!-- Compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Minified JS library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- script para el efecto de subir y bajar al seleccionar una opcion en el menu -->
+<script src="js/smooth-scroll.min.js"></script>  
+<script src="js/fotos-random.js"></script>  
+<script src="js/mapa.js"></script>  
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+   
+  </head>
+   
+   
+    <body>
+  <header class="header">
+      <div class="contenedor-menu" >
+      
+		  <a href="index.html" class="logo"></a>
+        <span class="icon-menu" id="btn-menu" onclick=""><i class="fas fa-bars icon-menu"></i></span>
+        <nav class="nav" id="nav" >
+             <ul class="menu" >
+            <li class="menu__item"><a href="#" class="menu__link select">Inicio</a></li>
+            <li class="menu__item"><a href="galeria.html" target="_blank" class="menu__link">Proyectos</a></li>
+            <li class="menu__item"><a href="#servicios" class="menu__link">Servicios</a></li>
+            <li class="menu__item"><a href="#nosotros" class="menu__link">Nosotros</a></li>
+            <li class="menu__item"><a href="#ubicacion" class="menu__link">Contactenos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+        
+   
+    <div class="banner"  id="banner">
+ 
+        
+        <div class="marco" >
+
+            <div class="cuadrado mostrar" id="cuadro">
+        
+                <p class='mensaje-banner' id='mbanner'>
+             
+
+              </div>
+          
+      
+        </div>
+       
+    </div>
+ 
+       
+ <section id="gallery" >
+    
+     
+
+     <div class="container-fluid" >
+
+               
+         <div class="row" id="row"></div>
+         
+     
+       
+    </div>
+     
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+   
+    <div class="modal-descrip" >
+       
+            <div  class="modal-imagen">
+
+       
+             <img  id="img01" style="height:100%;width:100%">
+                   
+
+            </div>
+
+       
+         <div  class="modal-texto">
+
+           <span class="closes">&times;</span>
+             <p class ="modal-titulo" id="mtitulo" >...</p>
+             <p class="modal-ubicacion" id="mubi">...</p>
+
+           <div class="about-para-txt" >
+           <p class="modal-parrafo" style="text-align:justify" id="jtexto">...</p>
+           </div>
+          
+     </div>
+
+    </div >
+     
+</div>
+   
+
+</section>
+       
+    <div class="parallax" id="servicios">    
+ 
+        <div class="my-serv">
+           
+         <p class="title-serv">Servicios</p>
+               
+               <div class="cont-serv" >
+
+                   
+                          <div class="serv1" id="sv1">
+                              <img src="img/logos/g1.svg" class="serimage">
+                              <h4 class="st">Gerencia</h4>                  
+                   
+                             
+                 
+                         </div>
+                  <div class="serv1" id="sv2">
+                              <img src="img/logos/super.svg" class="serimage">
+
+                              <h4 class="st">Supervisión</h4>
+                      
+                  
+                         </div>
+                  <div class="serv1" id="sv3">
+                   <img src="img/logos/audi.svg" class="serimage">
+
+
+                              <h4 class="st">Auditoría</h4>
+                         
+ 
+                 
+                         </div>
+                          <div class="serv1" id="sv4">
+                          <img src="img/logos/tec.svg" class="serimage">
+
+
+                              <h4 class="st">Technical Due Diligence</h4>
+                                 
+                         </div>
+                         
+            </div>
+
+     </div>
+       
+       
+  </div>
+
+
+       
+        <div class="nosotros" id="nosotros" >
+           
+       
+             <div class="intro"  id="colmena" >
+                 
+                 <h4 >Nosotros</h4>
+                           
+            </div>
+           
+           
+            <div class="datos" >
+               
+             <div class="estadisticas">
+
+                  <spam class="monto"><spam>$ </spam><spam class="counter" id="hoy"></spam></spam>
+
+                      <p> Inversión Gestionada</p>
+              </div>
+                
+           </div>
+			
+		
+    </div>
+           <div class="logos">   
+    
+           <div class="client-title" >Clientes satisfechos</div> 
+                   
+            <div class="container client-list">
+
+                 <div class="carousel slide" data-ride="carousel" data-interval="1800">
+        
+        <div class="carousel-inner" id="carouselid">
+            
+        </div>
+
+    </div>
+           
+</div>
+
+    
+   </div>         
+
+   
+   <!-- footer -->
+<div class="parallax2" id="ubicacion" > 
+    
+   <footer class="footer" >
+
+
+    <div class="flex-container" style="height: 440px" >      
+      
+       <div   class="flex-item-left" ><!--style="padding-left: 0px;" -->
+
+        <div class="title-web" style="width:100%">
+
+          <p class="title-footer">Ubícanos</p></div> 
+
+          <div class="direcciones">
+
+            <div class="datos-contac1" > 
+   
+               
+          <p class="tnubicacion"  >PERÚ</p>
+          <div>
+            <a href="https://www.google.com/maps/place/Av.+Sto.+Toribio+173,+San+Isidro+15073/@-12.0974128,-77.0386441,20z/data=!4m5!3m4!1s0x9105c84351cc6e9f:0x143e8fdbd5e00e92!8m2!3d-12.0975748!4d-77.0385194" target="_blank" class="abrirmapa">
+            <p class="nubicacion" >Av. Santo Toribio 173</p> 
+            <p class="nubicacion" >Vía Central 125, Piso 16</p> 
+            <p class="nubicacion" >San Isidro, Lima - Perú.</p> 
+          </a>
+          </div>
+            <p class="nubicacion" ><a href="tel:+5114412296" class="abrirmapa">+51 1 441-2296</a></p> 
+    
+           </div>
+
+           <div class="datos-contac2"   > 
+   
+            <p class="tnubicacion"  >PANAMÁ</p>
+           <div>
+            <a href="https://www.google.com/maps/place/P.H.+Costa+Del+Este+Country+Club/@9.0100949,-79.478902,17z/data=!3m1!4b1!4m5!3m4!1s0x8faca98eafe1eeb7:0xc5a2ce4cfc0091b6!8m2!3d9.0100949!4d-79.4767133" target="_blank" class="abrirmapa">
+           <p class="nubicacion" >Financial Park</p> 
+           <p class="nubicacion" >Costa Del Este Country Club</p> 
+           <p class="nubicacion" >Piso 35, Panamá City</p>
+          </a>
+        </div>
+  
+           <p class="nubicacion" ><a href="tel:+5078337544" class="abrirmapa">+507 833-7544</a></p>  
+    
+           </div>
+
+           <div class="datos-contac1"  > 
+   
+            <p class="tnubicacion" >COLOMBIA</p>
+            <div>
+              <a href="https://www.google.com/maps/place/Edificio+Tierra+Firme/@4.69318,-74.0367387,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f9aa68a9ce975:0x617d53bd93409dcc!8m2!3d4.6931737!4d-74.0345329" target="_blank" class="abrirmapa">
+             
+    
+            <p class="nubicacion" >Carrera 9 115-06/30</p> 
+            <p class="nubicacion" >Edificio Tierra Firme, Piso 17 </p> 
+            <p class="nubicacion" >Bogotá, Cundinamarca</p> 
+          </div>
+    
+    
+            <p class="nubicacion" ><a href="tel:+5719156608" class="abrirmapa">+57 1 915-6608</a></p>
+    
+           </div>
+
+          </div>
+
+
+           
+
+          
+
+                    
+
+       </div>
+
+       <div id="mapita" class="flex-item-right" style="height: 100%;"></div>
+
+
+  </div>
+
+
+  <div class="so-moviles" >
+                   
+    <a   href="https://www.facebook.com/Colmena" target="_blank" > <i class="fab fa-facebook" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+    <a   href="mailto:info@colmena.site" ><i class="far fa-envelope-open" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>                   
+    <a   href="https://www.instagram.com/colmenacompany/"  target="_blank"> <i class="fab fa-instagram" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+    <a   href="https://twitter.com/colmenagroup"  target="_blank"> <i class="fab fa-twitter" style="color: #FFFFFF;font-size: 2em;margin:5px" ></i></a>
+    <a   href="https://www.linkedin.com/company/colmena/" target="_blank"> <i class="fab fa-linkedin" style="color: #FFFFFF;font-size:2em;margin:5px" ></i></a>
+           
+  </div>
+
+  <p class="copy" >&copy; Colmena Gestión y Control de obras todos los derechos </p>
+
+
+
+
+
+ </div>
+    
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD26GmKZYNgmxofHDGIMHMOSnb1sevKflw&callback=initMap&libraries=&v=weekly&channel=2"
+            async></script>
+
+   
+     
+     
+  </footer>
+   
+</div>
+ 
+   
+ <script src="js/modalpro.js"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="js/jquery.counterup.js"></script>  
+<script src="js/contador-inversion.js"></script>  
+<script src="js/jscript.js"></script> 
+
+</body>    
+
+
+   
+
+</html>

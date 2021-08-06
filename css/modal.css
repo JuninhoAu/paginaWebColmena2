@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+.parallax {
+    /* imagen para usar como fondo en los servicios */
+    background-image:linear-gradient(rgba(0, 58, 112, 0.9),rgba(0, 58, 112, 0.9)),var(--imagen-ser) ;
+    /* altura */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: var(--attachment-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top:30px;
+}
+
+.parallax2 {
+    /* imagen para usar como fondo en los ervicios */
+  background-image:linear-gradient(rgba(0, 58, 112, 0.48),rgba(0, 58, 112, 0.48)),var(--imagen-s) ;
+   
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+     background-attachment: var(--attachment-img);
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+	/************************/
+	
+	/***********************/
+}
+
+:root{
+    
+    --todo-ancho:90%;
+	--sec-ancho:100%;
+    --sec-alto:220px;
+    --modal-titulo:12px;
+    --modal-sub:11px;
+    --modal-pf:9px;
+    --seccion-ancho:100%; 
+    --padding-texto:10px;
+	--imagen-s:url(../img/ubi-movil.jpg);
+	--imagen-ser:url(../img/banner/2.jpg);
+	--attachment-img:scroll;
+    --title-color:#003a70;
+    
+    
+    
+}
+
+@media (min-width: 450px) {
+:root{
+	    --todo-ancho:100%;
+ --modal-pf:7px;
+    /*--todo-ancho:600px;*/
+     --modal-titulo:10px;
+   /*  --modal-alto:230px;*/
+	--sec-alto:55%;
+	--sec-ancho:50%;
+    --padding-texto:10px;
+    
+    }
+
+
+}
+
+@media (min-width: 630px) {
+:root{
+	
+     --modal-pf:8px;
+    }
+
+}
+
+@media (min-width: 650px) {
+    
+    :root{
+     --modal-ancho:65%;
+		--modal-alto:auto;
+		--modal-pf:10px;
+		
+    }
+
+}
+
+@media (min-width: 992px) { 
+    
+   :root{
+       --modal-ancho:70%;
+       --seccion-ancho:50%; 
+	    --modal-alto:auto;
+	   --sec-alto:345px;
+	   --padding-texto:25px;
+       --modal-titulo:18px;
+       --modal-sub:14px;
+        --modal-pf:12px;
+	   --attachment-img:fixed;
+	    --imagen-s:url(../img/ubicacion.jpg);
+    }
+}
+
+@media(min-width:1024px) { 
+
+ :root{ 
+    --todo-ancho:80%;
+    --modal-alto:auto;
+	   --modal-titulo:21px;
+	   --modal-sub:16px;
+	 --modal-pf:13px;
+
+ }
+    
+}
+
+@media(min-width:1280px) { 
+
+ :root{ 
+    --todo-ancho:80%;
+    --modal-alto:auto;
+
+ }
+    
+}
+    
+ 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+ /* position: fixed;  Stay in place */
+  z-index: 99; /* Sit on top */
+ /* padding-top: 25%;  Location of the box */
+  left: 50%;
+  top: 50%;
+  width: 100%; /* Full width */
+  height: 100vh;
+  background-color: rgb(0,0,0,0.96); /* Fallback color */
+  background-color: rgba(0,0,0,0.96); /* Black w/ opacity */
+  overflow-y: hidden;
+	display: flex;
+	
+
+
+}
+
+
+
+   
+/* todo el contenedor de la modal */
+.modal-descrip {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;  
+  position: absolute;
+  width:var(--todo-ancho);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  background:#FFFFFF;
+
+
+   
+}
+
+/* seccion de la imagen en el contenedor */
+.modal-imagen {
+  width: var(--sec-ancho);
+  height:var(--sec-alto);
+
+
+}
+ /* seccion de la descirpcion en el contenedor */	
+.modal-texto {
+  width: var(--sec-ancho);
+  height:var(--sec-alto);
+ padding:var(--padding-texto);
+ background:var(--color-prueba);	
+
+
+}
+
+
+
+.about-para-txt{
+    
+    height: 70%;
+}
+  
+.modal-titulo{
+        
+ color:var(--title-color);
+ font-size:var(--modal-titulo);
+ font-weight:bold;
+ margin-bottom:0px;
+ font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+    
+}
+   
+  
+.modal-ubicacion{
+        
+font-size:var(--modal-sub);
+color:#003a70;
+padding-top:0px;
+	 margin-bottom:4px;
+font-family: 'Poppins', sans-serif;  
+
+}
+    
+ .modal-parrafo{
+        
+color:#0B0E18;
+font-size:var(--modal-pf);
+font-family: 'Montserrat', sans-serif;        
+
+}
+
+
+/* The Close Button */
+.closes {
+ color:var(--title-color);
+  float: right;
+  font-size: 28px;
+  
+}
+
+.closes:hover,
+.closes:focus {
+ color:#003A70;
+  text-decoration: none;
+  cursor: pointer;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
