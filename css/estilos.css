@@ -68,6 +68,7 @@
   --margenes-ubi:5px;
   --direccion:column;
   --ubicacion-padding:0px;
+  --margin-panama:0px;
 
   
 
@@ -135,6 +136,8 @@
 	--title-footer-web:80px;
   --margin-top-footer:10px;
   --ubicacion-padding:40px;
+  --margin-panama:16px;
+
 
 
     }
@@ -814,16 +817,17 @@ justify-content: center;
   width: 29%;
   height: 120px;
   text-align: center;
-  margin: 4px;
+  margin: 8px;
 
 }
 
 .datos-contac2{
 
 
-  width: 37%;
+  width: 32%;
   height: 120px;
   text-align: center;
+  margin-left: var(--margin-panama);
 
 }
 
